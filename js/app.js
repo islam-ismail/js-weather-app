@@ -3,7 +3,7 @@ class AjaxWeather {
     this.apiKey = "c1b7dc8a7a085cf0bf98a9fb9f51d58a";
   }
   async getWeather(city) {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${
       this.apiKey
     }&units=metric`;
     const weatherData = await fetch(url);
@@ -35,7 +35,7 @@ class Display {
     this.cityCountry.textContent = country;
     this.cityTemp.textContent = temp;
     this.cityHumidity.textContent = humidity;
-    this.cityIcon.src = `http://openweathermap.org/img/w/${icon}.png`;
+    this.cityIcon.src = `https://openweathermap.org/img/w/${icon}.png`;
   }
 }
 
